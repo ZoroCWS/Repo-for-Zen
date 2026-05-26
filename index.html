@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikigai - The Japanese Secret to a Long and Happy Life</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <!-- Particle Background -->
+    <canvas id="particleCanvas"></canvas>
+    
+    <!-- Floating Sakura Petals -->
+    <div class="sakura-container" id="sakuraContainer"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo">
+            <span class="kanji-logo">生き甲斐</span>
+            <span class="logo-text">IKIGAI</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link" data-text="Home">Home</a></li>
+            <li><a href="#about" class="nav-link" data-text="About">About</a></li>
+            <li><a href="#principles" class="nav-link" data-text="Principles">Principles</a></li>
+            <li><a href="#diagram" class="nav-link" data-text="Diagram">Diagram</a></li>
+            <li><a href="#book" class="nav-link" data-text="Book">Book</a></li>
+            <li><a href="#contact" class="nav-link" data-text="Contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#principles" class="mobile-link">Principles</a>
+        <a href="#diagram" class="mobile-link">Diagram</a>
+        <a href="#book" class="mobile-link">Book</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-kanji animate-kanji">生き甲斐</div>
+            <h1 class="hero-title split-text">
+                <span class="line">Discover Your</span>
+                <span class="line highlight">Ikigai</span>
+            </h1>
+            <p class="hero-subtitle fade-in-up">The Japanese Secret to a Long and Happy Life</p>
+            <div class="hero-buttons">
+                <a href="#about" class="btn btn-primary ripple">
+                    <span>Explore</span>
+                    <div class="btn-bg"></div>
+                </a>
+                <a href="#book" class="btn btn-secondary ripple">
+                    <span>Get the Book</span>
+                    <div class="btn-bg"></div>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll to Discover</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-kanji">关于</span>
+                <h2 class="section-title">What is Ikigai?</h2>
+                <div class="title-divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text reveal-left">
+                    <p class="lead">
+                        <span class="drop-cap">I</span>kigai is a Japanese concept that means "a reason for being." 
+                        It's the intersection of what you love, what you're good at, what the world needs, 
+                        and what you can be paid for.
+                    </p>
+                    <p>
+                        In Okinawa, one of the world's Blue Zones where people live the longest, 
+                        ikigai is considered an essential part of daily life. The locals believe 
+                        that having a clear sense of purpose contributes to longevity and happiness.
+                    </p>
+                    <p>
+                        This ancient wisdom has now been documented in the bestselling book by 
+                        Héctor García and Francesc Miralles, offering readers a pathway to 
+                        discover their own ikigai and live more fulfilling lives.
+                    </p>
+                    <div class="stats-grid">
+                        <div class="stat-item hover-lift">
+                            <span class="stat-number" data-target="100">0</span>
+                            <span class="stat-label">Years of Wisdom</span>
+                        </div>
+                        <div class="stat-item hover-lift">
+                            <span class="stat-number" data-target="5">0</span>
+                            <span class="stat-label">Blue Zones Studied</span>
+                        </div>
+                        <div class="stat-item hover-lift">
+                            <span class="stat-number" data-target="1">0</span>
+                            <span class="stat-label">Million+ Copies Sold</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image reveal-right">
+                    <div class="image-frame">
+                        <div class="frame-border"></div>
+                        <div class="image-content">
+                            <div class="zen-garden">
+                                <div class="rock rock-1"></div>
+                                <div class="rock rock-2"></div>
+                                <div class="rock rock-3"></div>
+                                <div class="sand-pattern"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Principles Section -->
+    <section class="principles section" id="principles">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-kanji">原則</span>
+                <h2 class="section-title">The 10 Principles</h2>
+                <div class="title-divider"></div>
+            </div>
+            <div class="principles-grid">
+                <div class="principle-card reveal-card" data-index="0">
+                    <div class="card-number">01</div>
+                    <div class="card-icon">🌸</div>
+                    <h3>Stay Active</h3>
+                    <p>Don't retire. Keep doing things you love with passion.</p>
+                    <div class="card-decoration"></div>
+                </div>
+                <div class="principle-card reveal-card" data-index="1">
+                    <div class="card-number">02</div>
+                    <div class="card-icon">🐢</div>
+                    <h3>Take It Slow</h3>
+                    <p>Hurry slowly. Focus on one thing at a time mindfully.</p>
+                    <div class="card-decoration"></div>
+                </div>
+                <div class="principle-card reveal-card" data-index="2">
+                    <div class="card-number">03</div>
+                    <div class="card-icon">🍜</div>
+                    <h3>Don't Fill Up</h3>
+                    <p>Eat until you're 80% full. Practice moderation.</p>
+                    <div class="card-decoration"></div>
+                </div>
+                <div class="principle-card reveal-card" data-index="3">
+                    <div class="card-number">04</div>
+                    <div class="card-icon">👥</div>
+                    <h3>Surround Yourself</h3>
+                    <p>Good friends are the best medicine for the soul.</p>
+                    <div class="card-decoration"></div>
+                </div>
+                <div class="principle-card reveal-card" data-index="4">
+                    <div class="card-number">05</div>
+                    <div class="card-icon">🎂</div>
+                    <h3>Celebrate</h3>
+                    <p>Take time to celebrate birthdays and special moments.</p>
+                    <div class="card-decoration"></div>
+                </div>
+                <div class="principle-card reveal-card" data-index="5">
+                    <div class="card-number">06</div>
+                    <div class="card-icon">🌊</div>
+                    <h3>Live in the Moment</h3>
+                    <p>Stop dwelling on the past. Embrace the present.</p>
+                    <div class="card-decoration"></div>
+                </div>
+                <div class="principle-card reveal-card" data-index="6">
+                    <div class="card-number">07</div>
+                    <div class="card-icon">🎯</div>
+                    <h3>Follow Your Ikigai</h3>
+                    <p>Find your purpose and let it guide your daily life.</p>
+                    <div class="card-decoration"></div>
+                </div>
+                <div class="principle-card reveal-card" data-index="7">
+                    <div class="card-number">08</div>
+                    <div class="card-icon">☀️</div>
+                    <h3>Embrace Nature</h3>
+                    <p>Connect with the natural world around you daily.</p>
+                    <div class="card-decoration"></div>
+                </div>
+                <div class="principle-card reveal-card" data-index="8">
+                    <div class="card-number">09</div>
+                    <div class="card-icon">😊</div>
+                    <h3>Smile Often</h3>
+                    <p>A positive attitude attracts good energy and people.</p>
+                    <div class="card-decoration"></div>
+                </div>
+                <div class="principle-card reveal-card" data-index="9">
+                    <div class="card-number">10</div>
+                    <div class="card-icon">💝</div>
+                    <h3>Give Thanks</h3>
+                    <p>Practice gratitude for everything you receive.</p>
+                    <div class="card-decoration"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ikigai Diagram Section -->
+    <section class="diagram section" id="diagram">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-kanji">図</span>
+                <h2 class="section-title">The Ikigai Diagram</h2>
+                <div class="title-divider"></div>
+            </div>
+            <div class="diagram-wrapper reveal-diagram">
+                <div class="ikigai-diagram">
+                    <div class="circle circle-1" data-label="What You Love">
+                        <div class="circle-content">
+                            <span class="circle-text">Love</span>
+                        </div>
+                    </div>
+                    <div class="circle circle-2" data-label="What You're Good At">
+                        <div class="circle-content">
+                            <span class="circle-text">Good At</span>
+                        </div>
+                    </div>
+                    <div class="circle circle-3" data-label="What the World Needs">
+                        <div class="circle-content">
+                            <span class="circle-text">Needs</span>
+                        </div>
+                    </div>
+                    <div class="circle circle-4" data-label="What You Can Be Paid For">
+                        <div class="circle-content">
+                            <span class="circle-text">Paid For</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Intersection Labels -->
+                    <div class="intersection intersection-1">
+                        <span>Passion</span>
+                    </div>
+                    <div class="intersection intersection-2">
+                        <span>Mission</span>
+                    </div>
+                    <div class="intersection intersection-3">
+                        <span>Vocation</span>
+                    </div>
+                    <div class="intersection intersection-4">
+                        <span>Profession</span>
+                    </div>
+                    
+                    <!-- Center -->
+                    <div class="ikigai-center">
+                        <span class="center-kanji">生き甲斐</span>
+                        <span class="center-text">IKIGAI</span>
+                    </div>
+                </div>
+                <div class="diagram-explanation">
+                    <div class="explanation-item reveal-explain" data-index="0">
+                        <div class="color-dot dot-love"></div>
+                        <h4>What You Love</h4>
+                        <p>Your passions and interests that bring you joy</p>
+                    </div>
+                    <div class="explanation-item reveal-explain" data-index="1">
+                        <div class="color-dot dot-good"></div>
+                        <h4>What You're Good At</h4>
+                        <p>Your skills, talents, and abilities</p>
+                    </div>
+                    <div class="explanation-item reveal-explain" data-index="2">
+                        <div class="color-dot dot-needs"></div>
+                        <h4>What the World Needs</h4>
+                        <p>How you can contribute to society</p>
+                    </div>
+                    <div class="explanation-item reveal-explain" data-index="3">
+                        <div class="color-dot dot-paid"></div>
+                        <h4>What You Can Be Paid For</h4>
+                        <p>Your profession and source of income</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Section -->
+    <section class="book section" id="book">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-kanji">本</span>
+                <h2 class="section-title">The Book</h2>
+                <div class="title-divider"></div>
+            </div>
+            <div class="book-content">
+                <div class="book-cover reveal-book-cover">
+                    <div class="cover-3d">
+                        <div class="cover-front">
+                            <div class="cover-design">
+                                <div class="cover-kanji">生き甲斐</div>
+                                <h3 class="cover-title">IKIGAI</h3>
+                                <p class="cover-subtitle">The Japanese Secret to a Long and Happy Life</p>
+                                <div class="cover-authors">
+                                    <span>Héctor García</span>
+                                    <span>Francesc Miralles</span>
+                                </div>
+                                <div class="cover-decoration">
+                                    <div class="sun-rise"></div>
+                                    <div class="mountain"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cover-spine"></div>
+                        <div class="cover-back"></div>
+                    </div>
+                </div>
+                <div class="book-info reveal-book-info">
+                    <h3>About the Authors</h3>
+                    <div class="author-cards">
+                        <div class="author-card hover-lift">
+                            <div class="author-avatar">📝</div>
+                            <h4>Héctor García</h4>
+                            <p>Spanish-Japanese author and engineer who has lived in Japan since 2004. He runs a popular blog about Japanese culture.</p>
+                        </div>
+                        <div class="author-card hover-lift">
+                            <div class="author-avatar">✏️</div>
+                            <h4>Francesc Miralles</h4>
+                            <p>Spanish author specializing in spirituality and self-help. Co-author of several international bestsellers.</p>
+                        </div>
+                    </div>
+                    <div class="book-details">
+                        <div class="detail-item">
+                            <span class="detail-icon">📖</span>
+                            <span class="detail-text">208 Pages</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">📅</span>
+                            <span class="detail-text">Published 2016</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">🌍</span>
+                            <span class="detail-text">Translated to 35+ Languages</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">⭐</span>
+                            <span class="detail-text">4.5/5 Average Rating</span>
+                        </div>
+                    </div>
+                    <div class="purchase-buttons">
+                        <a href="#" class="btn btn-primary ripple pulse">
+                            <span>Buy on Amazon</span>
+                            <div class="btn-bg"></div>
+                        </a>
+                        <a href="#" class="btn btn-secondary ripple">
+                            <span>Kindle Edition</span>
+                            <div class="btn-bg"></div>
+                        </a>
+                        <a href="#" class="btn btn-outline ripple">
+                            <span>Audible</span>
+                            <div class="btn-bg"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quotes Carousel -->
+            <div class="quotes-section">
+                <div class="quotes-container" id="quotesContainer">
+                    <div class="quote-card active">
+                        <div class="quote-mark">"</div>
+                        <p class="quote-text">The purpose of life is to find your gift. The meaning of life is to give it away.</p>
+                        <span class="quote-author">— Pablo Picasso</span>
+                    </div>
+                    <div class="quote-card">
+                        <div class="quote-mark">"</div>
+                        <p class="quote-text">He who has a why to live can bear almost any how.</p>
+                        <span class="quote-author">— Friedrich Nietzsche</span>
+                    </div>
+                    <div class="quote-card">
+                        <div class="quote-mark">"</div>
+                        <p class="quote-text">Your ikigai is at the intersection of what you love, what you're good at, what the world needs, and what you can be paid for.</p>
+                        <span class="quote-author">— Héctor García & Francesc Miralles</span>
+                    </div>
+                </div>
+                <div class="quote-nav">
+                    <button class="quote-btn prev" id="quotePrev">❮</button>
+                    <div class="quote-dots" id="quoteDots"></div>
+                    <button class="quote-btn next" id="quoteNext">❯</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-kanji">接触</span>
+                <h2 class="section-title">Start Your Journey</h2>
+                <div class="title-divider"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form-wrapper reveal-form">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" required>
+                            <label for="name">Your Name</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required>
+                            <label for="email">Your Email</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary ripple">
+                            <span>Send Message</span>
+                            <div class="btn-bg"></div>
+                        </button>
+                    </form>
+                </div>
+                <div class="contact-info reveal-info">
+                    <div class="info-card hover-lift">
+                        <div class="info-icon">📧</div>
+                        <h4>Email Us</h4>
+                        <p>hello@ikigai-journey.com</p>
+                    </div>
+                    <div class="info-card hover-lift">
+                        <div class="info-icon">📱</div>
+                        <h4>Follow Us</h4>
+                        <p>@ikigai_official</p>
+                    </div>
+                    <div class="info-card hover-lift">
+                        <div class="info-icon">📍</div>
+                        <h4>Location</h4>
+                        <p>Okinawa, Japan</p>
+                    </div>
+                    <div class="newsletter">
+                        <h4>Join Our Newsletter</h4>
+                        <p>Receive weekly insights on living with purpose</p>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Your email address">
+                            <button type="submit" class="subscribe-btn">→</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
+            </svg>
+        </div>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="kanji-logo">生き甲斐</span>
+                <span class="logo-text">IKIGAI</span>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#principles">Principles</a>
+                <a href="#diagram">Diagram</a>
+                <a href="#book">Book</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                <a href="#" class="social-link" aria-label="YouTube">📹</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ikigai Journey. All rights reserved.</p>
+                <p class="japanese-blessing">幸せと長寿を 🎋</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-kanji">生き甲斐</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p>Loading your journey...</p>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-icon">✓</div>
+        <div class="toast-message">Message sent successfully!</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
